@@ -18,7 +18,7 @@
     <% @todo_lists.each_with_index do |todo_list, i| %>
       <tr>
         <td><div class="form-check ml-5">
-          <input class="form-check-input" type="checkbox" id="c<%= i %>"><label class="form-check-label"><span class="font-weight-bold h5"><%= todo_list.title %></span><div><span class=""><%= todo_list.content %></span><span class=""><%= todo_list.limit %></span></div></label>
+          <input class="form-check-input" type="checkbox" id="c<%= i %>"><label class="form-check-label"><span class="font-weight-bold h5"><%= todo_list.title %></span><div><p class=""><%= todo_list.content %></p><p class=""><%= todo_list.limit %></p></div></label>
         </div></td>
         <!-- <td></td>
         <td><%= link_to 'Edit', edit_todo_list_path(todo_list) %></td>
@@ -30,7 +30,7 @@
 </div>
 
 <div class="float-right mb-3">
-  <%= link_to  new_todo_list_path, class: 'btn btn-secondary' do %>
+  <%= link_to  new_todo_list_path, class: 'btn btn-danger' do %>
     <i class="material-icons" style="font-size:24px;">add</i>
     <span>追加</span>
   <% end %></div>
