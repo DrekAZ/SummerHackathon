@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Todo Lists</h1>
-
-<table>
+<!-- <h1>Todo Lists</h1> -->
+<%= render partial: 'todo_lists/data_table' %>
+<!-- <table>
   <thead>
     <tr>
       <th>Title</th>
@@ -15,14 +15,14 @@
     <% @todo_lists.each do |todo_list| %>
       <tr>
         <td><%= todo_list.title %></td>
-        <td><%= todo_list.body %></td>
+        <td><%= todo_list.content %></td>
         <td><%= link_to 'Show', todo_list %></td>
         <td><%= link_to 'Edit', edit_todo_list_path(todo_list) %></td>
         <td><%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
 <br>
 

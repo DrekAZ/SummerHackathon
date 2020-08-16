@@ -70,6 +70,6 @@ class TodoListsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def todo_list_params
-      params.require(:todo_list).permit(:title, :body)
+      params.require(:todo_list).permit(:title, :content, :limit)
     end
 end

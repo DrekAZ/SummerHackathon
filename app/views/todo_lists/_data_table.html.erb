@@ -1,0 +1,36 @@
+<div class="row">
+<table class="table table-borderless table-sm">
+  <tr>
+  <% 
+    t = Time.current 
+    now = [t.year, t.month, t.day, t.hour, t.min, t.wday]
+    wdays = ['日','月','火','水','木','金','土']
+  %>
+  <th><div class="col bg-info text-white rounded"><div class="p-1"><span class="text-monospace font-weight-bold h3 text-white">
+    <%= t.year %>/<%= t.month %>/<%= t.day %>
+  </span><div class="text-white"><span class="font-weight-lighter h6 text-white"><%= wdays[t.wday] %>曜日</span></div></div></div></th>
+  
+  <!-- <% wdays.each_with_index do |wd, i| %>
+    <th><div class="col text-center"><span class="text-monospace font-weight-bold h3"><%= t.day-t.wday+i %></span><br><span class="font-weight-lighter h6"><%= wd %></span></div></th>
+  <% end %> -->
+  </tr>
+  <tbody class="rounded">
+    <% @todo_lists.each_with_index do |todo_list, i| %>
+      <tr>
+        <td><div class="form-check ml-5 shadow-sm">
+          <input class="form-check-input" type="checkbox" id="c<%= i %>"><label class="form-check-label"><span class="font-weight-bold h5"><%= todo_list.title %></span><div><p class=""><%= todo_list.content %></p><p class=""><%= todo_list.limit %></p></div></label>
+        </div></td>
+        <!-- <td></td>
+        <td><%= link_to 'Edit', edit_todo_list_path(todo_list) %></td>
+        <td><%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<div class="float-right mb-3">
+  <%= link_to  new_todo_list_path, class: 'btn btn-danger' do %>
+    <i class="material-icons" style="font-size:24px;">add</i>
+    <span>追加</span>
+  <% end %></div>
