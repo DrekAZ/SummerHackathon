@@ -10,12 +10,16 @@
       <form class="form-inline my-2 my-lg-0">
       <ul class="navbar-nav mr-3">
         <li class="nav-item">
-          <button class="btn btn-success my-2 my-sm-0 w-100" href="signup">sign up</button>
+          <%= link_to  new_user_registration_path, class: 'btn btn-success my-2 my-sm-0 w-100' do %>
+            <span>新規登録</span>
+          <% end %>
         </li>
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <button class="btn btn-primary my-2 my-sm-0 w-100" href="login">log in</button>
+          <%= link_to  todo_lists_path, class: 'btn btn-primary my-2 my-sm-0 w-100' do %>
+            <span>ログイン</span>
+          <% end %>
         </li>
       </ul>
       </form>

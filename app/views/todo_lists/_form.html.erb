@@ -11,9 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field form-group">
+  <div class="field form-group novalidate">
     <%= form.label :title, "タイトル" %>
-    <%= form.text_field :title, class: 'form-control'%>
+    <%= form.text_field :title, class: 'form-control', :required=>true %>
   </div>
 
   <div class="field form-group">
